@@ -1,5 +1,5 @@
 # The URL from which the client is downloaded
-appbase = https://github.com/Ritzythedevil/Momentum/raw/master/App/
+appbase = https://raw.githubusercontent.com/Ritzythedevil/Momentum/master/App/
 
 # UI Configuration
 ui.name = Momentum
