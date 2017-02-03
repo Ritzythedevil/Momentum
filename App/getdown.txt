@@ -1,0 +1,48 @@
+# The URL from which the client is downloaded
+appbase = https://raw.githubusercontent.com/Ritzythedevil/Momentum/master/App/
+
+# UI Configuration
+ui.name = Momentum
+
+# The main entry point for the application
+class = LaunchMomentum
+
+# Allow App to be run Offline
+allow_offline = true
+
+# Application files
+code = LaunchMomentum.jar
+code = Momentum/APIs/Goal.class
+code = Momentum/APIs/MotivationalContent.class
+code = Momentum/APIs/ServiceAPI.class
+code = Momentum/Controllers/Motivation_Activity_Controller$1.class
+code = Momentum/Controllers/Motivation_Activity_Controller$2.class
+code = Momentum/Controllers/Motivation_Activity_Controller.class
+code = Momentum/Models/Main$1.class
+code = Momentum/Models/Main$2.class
+code = Momentum/Models/Main$3$1.class
+code = Momentum/Models/Main$3.class
+code = Momentum/Models/Main$4.class
+code = Momentum/Models/Main.class
+code = Momentum/Utils/DatabaseManager.class
+code = Momentum/Utils/DownloadMotivationContent$1.class
+code = Momentum/Utils/DownloadMotivationContent.class
+code = Libraries/commons-io-2.5.jar
+code = Libraries/converter-gson-2.1.0.jar
+code = Libraries/gson-2.8.0.jar
+code = Libraries/h2-1.4.193.jar
+code = Libraries/jfoenix.jar
+code = Libraries/okhttp-3.3.0.jar
+code = Libraries/okio-1.8.0.jar
+code = Libraries/retrofit-2.1.0.jar
+code = Libraries/TrayNotification.jar
+resource = MotivationalContent/Default/Cover.png
+resource = MotivationalContent/Default/Video.mp4
+resource = Resources/Audio/Hello.mp3
+resource = Resources/Audio/TimerFinish.mp3
+resource = Resources/Data/PlaceHolder
+resource = Resources/Font/Roboto-Bold.ttf
+resource = Resources/Image/icon.png
+resource = Resources/Image/logo.png
+resource = Resources/Stylesheet/Motivation_Activity.css
+resource = Resources/View/Motivation_Activity_View.fxml

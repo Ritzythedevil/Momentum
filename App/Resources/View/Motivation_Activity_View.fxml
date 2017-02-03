@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="StackPaneRoot" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="480.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Momentum.Controllers.Motivation_Activity_Controller">
+
+   <children>
+      <VBox fx:id="VBoxRoot">
+         <children>
+            <ImageView fx:id="ImageViewCover" fitHeight="240.0" fitWidth="800.0" pickOnBounds="true" />
+            <AnchorPane fx:id="AnchorPaneBottom" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="240.0" prefWidth="800.0">
+               <children>
+                  <VBox fx:id="VBoxBottom" alignment="TOP_CENTER" fillWidth="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox fx:id="HBoxTaskTitle" alignment="CENTER" focusTraversable="true" onMouseClicked="#EditTask" onTouchPressed="#EditTask" VBox.vgrow="NEVER">
+                           <children>
+                              <Line fx:id="LineLeft" endX="100.0" layoutX="521.0" layoutY="63.0" opacity="0.2" strokeLineCap="BUTT" strokeLineJoin="BEVEL">
+                                 <fill>
+                                    <LinearGradient endX="1.0">
+                                       <stops>
+                                          <Stop color="BLACK" />
+                                          <Stop color="WHITE" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Line>
+                              <Label fx:id="LabelTaskName" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" text="Do something great" textAlignment="CENTER" textFill="#000000b2">
+                                 <font>
+                                    <Font name="Arial Narrow" size="36.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="TextFieldTaskEdit" alignment="CENTER" onAction="#EditTask" unFocusColor="#000000b2" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="Arial Narrow" size="18.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Line fx:id="LineRight" endX="100.0" opacity="0.2" strokeLineCap="BUTT" strokeLineJoin="BEVEL" HBox.hgrow="NEVER">
+                                 <fill>
+                                    <LinearGradient endX="1.0">
+                                       <stops>
+                                          <Stop color="BLACK" />
+                                          <Stop color="WHITE" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Line>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox fx:id="HBoxTaskTimer" alignment="CENTER" fillHeight="false" focusTraversable="true" onMouseClicked="#EditTime" onTouchPressed="#EditTime" VBox.vgrow="NEVER">
+                           <children>
+                              <Label fx:id="LabelHour" alignment="CENTER" contentDisplay="CENTER" text="00" textAlignment="CENTER" textFill="#000000cc">
+                                 <font>
+                                    <Font name="Arial Narrow" size="36.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="LabelSeparatorHM" alignment="CENTER" contentDisplay="CENTER" text=":" textAlignment="CENTER" textFill="#000000cc">
+                                 <font>
+                                    <Font name="Arial Narrow" size="36.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </HBox.margin>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Label>
+                              <Label fx:id="LabelMinute" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" text="00" textAlignment="CENTER" textFill="#000000cc">
+                                 <font>
+                                    <Font name="Arial Narrow" size="36.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="LabelSeparatorMS" alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="10.0" text=":" textAlignment="CENTER" textFill="#000000cc">
+                                 <font>
+                                    <Font name="Arial Narrow" size="36.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="LabelSecond" alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="10.0" text="00" textAlignment="CENTER" textFill="#000000cc">
+                                 <font>
+                                    <Font name="Arial Narrow" size="36.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </VBox.margin></HBox>
+                        <HBox fx:id="HBoxTimerEdit" alignment="CENTER" layoutX="373.0" layoutY="65.0" onMouseClicked="#EditTime" onTouchPressed="#EditTime">
+                           <children>
+                              <JFXButton fx:id="ButtonTimerReset" alignment="CENTER" contentDisplay="CENTER" onAction="#TimerReset" style="-fx-background-radius: 20; -fx-background-color: #fecb2f;" text="Reset">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                 </padding>
+                              </JFXButton>
+                              <JFXButton fx:id="ButtonTimerAdd5Min" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="10.0" onAction="#Add5Min" style="-fx-background-radius: 20; -fx-background-color: #cccccc;" text="+5 Min">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                 </padding>
+                              </JFXButton>
+                              <JFXButton fx:id="ButtonTimerAdd30Min" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="10.0" onAction="#Add30Min" style="-fx-background-radius: 20; -fx-background-color: #cccccc;" text="+30 Min">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                 </padding>
+                              </JFXButton>
+                              <JFXButton fx:id="ButtonTimerAdd1Hour" alignment="CENTER" contentDisplay="CENTER" layoutX="92.0" layoutY="10.0" onAction="#Add1hour" style="-fx-background-radius: 20; -fx-background-color: #cccccc;" text="+1 Hour">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                 </padding>
+                              </JFXButton>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <JFXButton fx:id="ButtonGetShitDone" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" mnemonicParsing="false" onAction="#GetShitDone" style="-fx-background-color: #00b4ff; -fx-background-radius: 30;" text="Lets Get Shit Done" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+         </children>
+      </VBox>
+      <TextArea fx:id="TextCoverTitle" blendMode="EXCLUSION" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="120.0" prefWidth="800.0" text="" wrapText="true" StackPane.alignment="TOP_CENTER">
+         <font>
+            <Font name="Book Antiqua Italic" size="50.0" />
+         </font>
+      </TextArea>
+      <MediaView fx:id="MediaViewMotivationVideo" fitHeight="240.0" fitWidth="400.0" onMouseClicked="#PlayPause" onTouchPressed="#PlayPause" StackPane.alignment="CENTER">
+      </MediaView>
+      <JFXButton fx:id="ButtonMotivationVideoPlay" onAction="#PlayPause" opacity="0.7" style="-fx-background-radius: 25; -fx-background-color: #ffffff;" text="Play">
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </JFXButton>
+   </children>
+</StackPane>
