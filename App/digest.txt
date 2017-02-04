@@ -32,5 +32,5 @@ Resources/Font/Roboto-Bold.ttf = e31fcf1885e371e19f5786c2bdfeae1b
 Resources/Image/icon.png = 1bd3655a10e9d238df69442096d3c6dd
 Resources/Image/logo.png = 083d6b4d6740ed8f793354a3ee36aad8
 Resources/Stylesheet/Motivation_Activity.css = 29b8bf56e503d9f0d5560496268ba61f
-Resources/View/Motivation_Activity_View.fxml = c2976e4bb9c7b09f3f3eac6469d2128b
-digest.txt = ffef3a167086f38f599a35b4d6dd3323
+Resources/View/Motivation_Activity_View.fxml = 9940dd6ca99d69288361ea89730d974b
+digest.txt = c4c8fa162c8cad40bd050f800e2bee3c
