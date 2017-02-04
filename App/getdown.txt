@@ -27,7 +27,6 @@ code = Momentum/Models/Main.class
 code = Momentum/Utils/DatabaseManager.class
 code = Momentum/Utils/DownloadMotivationContent$1.class
 code = Momentum/Utils/DownloadMotivationContent.class
-code = Libraries/commons-io-2.5.jar
 code = Libraries/converter-gson-2.1.0.jar
 code = Libraries/gson-2.8.0.jar
 code = Libraries/h2-1.4.193.jar
