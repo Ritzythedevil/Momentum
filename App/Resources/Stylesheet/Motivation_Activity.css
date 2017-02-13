@@ -20,3 +20,13 @@
     -fx-text-alignment: center;
 
 }
+
+.ButtonGetShitDone.TimerRunning {
+    -fx-background-color: #009688;
+    -fx-background-radius: 30;
+}
+
+.ButtonGetShitDone.TimerStopped {
+    -fx-background-color: #00b4ff;
+    -fx-background-radius: 30;
+}

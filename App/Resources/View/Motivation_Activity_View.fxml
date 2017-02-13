@@ -2,6 +2,7 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
@@ -16,7 +17,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<StackPane fx:id="StackPaneRoot" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="480.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Momentum.Controllers.Motivation_Activity_Controller">
+<StackPane fx:id="StackPaneRoot" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="480.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Momentum.Controllers.Motivation_Activity_Controller">
 
    <children>
       <VBox fx:id="VBoxRoot">
@@ -24,9 +25,9 @@
             <ImageView fx:id="ImageViewCover" fitHeight="240.0" fitWidth="800.0" pickOnBounds="true" />
             <AnchorPane fx:id="AnchorPaneBottom" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="240.0" prefWidth="800.0">
                <children>
-                  <VBox fx:id="VBoxBottom" alignment="TOP_CENTER" fillWidth="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                  <VBox fx:id="VBoxBottom" alignment="TOP_CENTER" fillWidth="false" onMouseClicked="#EditGoal" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <HBox fx:id="HBoxTaskTitle" alignment="CENTER" focusTraversable="true" onMouseClicked="#EditTask" onTouchPressed="#EditTask" VBox.vgrow="NEVER">
+                        <HBox fx:id="HBoxTaskTitle" alignment="CENTER" focusTraversable="true" VBox.vgrow="NEVER">
                            <children>
                               <Line fx:id="LineLeft" endX="100.0" layoutX="521.0" layoutY="63.0" opacity="0.2" strokeLineCap="BUTT" strokeLineJoin="BEVEL">
                                  <fill>
@@ -41,12 +42,12 @@
                                     <Insets right="20.0" />
                                  </HBox.margin>
                               </Line>
-                              <Label fx:id="LabelTaskName" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" text="Do something great" textAlignment="CENTER" textFill="#000000b2">
+                              <Label fx:id="LabelTaskName" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" textAlignment="CENTER" textFill="#000000b2">
                                  <font>
                                     <Font name="Arial Narrow" size="36.0" />
                                  </font>
                               </Label>
-                              <JFXTextField fx:id="TextFieldTaskEdit" alignment="CENTER" onAction="#EditTask" unFocusColor="#000000b2" HBox.hgrow="ALWAYS">
+                              <JFXTextField fx:id="TextFieldTaskEdit" alignment="CENTER" unFocusColor="#000000b2" HBox.hgrow="ALWAYS">
                                  <font>
                                     <Font name="Arial Narrow" size="18.0" />
                                  </font>
@@ -69,7 +70,7 @@
                               <Insets top="20.0" />
                            </VBox.margin>
                         </HBox>
-                        <HBox fx:id="HBoxTaskTimer" alignment="CENTER" fillHeight="false" focusTraversable="true" onMouseClicked="#EditTime" onTouchPressed="#EditTime" VBox.vgrow="NEVER">
+                        <HBox fx:id="HBoxTaskTimer" alignment="CENTER" fillHeight="false" focusTraversable="true" VBox.vgrow="NEVER">
                            <children>
                               <Label fx:id="LabelHour" alignment="CENTER" contentDisplay="CENTER" text="00" textAlignment="CENTER" textFill="#000000cc">
                                  <font>
@@ -112,7 +113,7 @@
                            <VBox.margin>
                               <Insets bottom="10.0" top="10.0" />
                            </VBox.margin></HBox>
-                        <HBox fx:id="HBoxTimerEdit" alignment="CENTER" layoutX="373.0" layoutY="65.0" onMouseClicked="#EditTime" onTouchPressed="#EditTime">
+                        <HBox fx:id="HBoxTimerEdit" alignment="CENTER" layoutX="373.0" layoutY="65.0">
                            <children>
                               <JFXButton fx:id="ButtonTimerReset" alignment="CENTER" contentDisplay="CENTER" onAction="#TimerReset" style="-fx-background-radius: 20; -fx-background-color: #fecb2f;" text="Reset">
                                  <HBox.margin>
@@ -122,7 +123,7 @@
                                     <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
                                  </padding>
                               </JFXButton>
-                              <JFXButton fx:id="ButtonTimerAdd5Min" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="10.0" onAction="#Add5Min" style="-fx-background-radius: 20; -fx-background-color: #cccccc;" text="+5 Min">
+                              <JFXButton fx:id="ButtonTimerAdd5Min" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="10.0" onAction="#AddTime" style="-fx-background-radius: 20; -fx-background-color: #cccccc;" text="+5 Min">
                                  <HBox.margin>
                                     <Insets left="10.0" right="10.0" />
                                  </HBox.margin>
@@ -130,7 +131,7 @@
                                     <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
                                  </padding>
                               </JFXButton>
-                              <JFXButton fx:id="ButtonTimerAdd30Min" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="10.0" onAction="#Add30Min" style="-fx-background-radius: 20; -fx-background-color: #cccccc;" text="+30 Min">
+                              <JFXButton fx:id="ButtonTimerAdd30Min" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="10.0" onAction="#AddTime" style="-fx-background-radius: 20; -fx-background-color: #cccccc;" text="+30 Min">
                                  <HBox.margin>
                                     <Insets left="10.0" right="10.0" />
                                  </HBox.margin>
@@ -138,7 +139,7 @@
                                     <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
                                  </padding>
                               </JFXButton>
-                              <JFXButton fx:id="ButtonTimerAdd1Hour" alignment="CENTER" contentDisplay="CENTER" layoutX="92.0" layoutY="10.0" onAction="#Add1hour" style="-fx-background-radius: 20; -fx-background-color: #cccccc;" text="+1 Hour">
+                              <JFXButton fx:id="ButtonTimerAdd1Hour" alignment="CENTER" contentDisplay="CENTER" layoutX="92.0" layoutY="10.0" onAction="#AddTime" style="-fx-background-radius: 20; -fx-background-color: #cccccc;" text="+1 Hour">
                                  <HBox.margin>
                                     <Insets left="10.0" right="10.0" />
                                  </HBox.margin>
@@ -154,7 +155,7 @@
                               <Insets bottom="10.0" />
                            </VBox.margin>
                         </HBox>
-                        <JFXButton fx:id="ButtonGetShitDone" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" mnemonicParsing="false" onAction="#GetShitDone" style="-fx-background-color: #00b4ff; -fx-background-radius: 30;" text="Lets Get Shit Done" textFill="WHITE">
+                        <JFXButton fx:id="ButtonGetShitDone" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" mnemonicParsing="false" onAction="#GetShitDone" text="Let's Get Shit Done" textFill="WHITE">
                            <font>
                               <Font name="Arial Bold" size="15.0" />
                            </font>
@@ -164,6 +165,10 @@
                            <VBox.margin>
                               <Insets top="5.0" />
                            </VBox.margin>
+                           <styleClass>
+                              <String fx:value="ButtonGetShitDone" />
+                              <String fx:value="TimerStopped" />
+                           </styleClass>
                         </JFXButton>
                      </children>
                   </VBox>
