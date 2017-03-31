@@ -1,5 +1,5 @@
 getdown.txt = 83393285a7fb3fd2511dcdd6def9d8c9
-LaunchMomentum.jar = 6e78f9fec551e53d7531337d5cdd509a
+LaunchMomentum.jar = 5e0e7a4833356667b93d790ddf715af6
 Momentum/APIs/Goal.class = b30fc6dde45d48c893dadec26e8abf10
 Momentum/APIs/MotivationalContent.class = d317b556e9e564e90fb1c73786be8a18
 Momentum/APIs/ServiceAPI.class = a62bc0ece48236aa1afe6dd315b8cf29
@@ -36,4 +36,4 @@ Resources/Image/icon.png = 1bd3655a10e9d238df69442096d3c6dd
 Resources/Image/logo.png = 083d6b4d6740ed8f793354a3ee36aad8
 Resources/Stylesheet/Motivation_Activity.css = 160334a9e2c915700941e279e154dbef
 Resources/View/Motivation_Activity_View.fxml = 3aa0de9635f7261c59e0591ba1150a1b
-digest.txt = 429aedaabb4bc2f1894e9121667026f9
+digest.txt = b2a73fb355c15407af4994bf5ff9176f
