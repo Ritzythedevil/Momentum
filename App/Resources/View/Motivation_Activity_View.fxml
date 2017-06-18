@@ -47,7 +47,7 @@
                                     <Font name="Arial Narrow" size="36.0" />
                                  </font>
                               </Label>
-                              <JFXTextField fx:id="TextFieldTaskEdit" alignment="CENTER" unFocusColor="#000000b2" HBox.hgrow="ALWAYS">
+                              <JFXTextField fx:id="TextFieldTaskEdit" alignment="CENTER" onKeyPressed="#TaskEditOnEnter" unFocusColor="#000000b2" HBox.hgrow="ALWAYS">
                                  <font>
                                     <Font name="Arial Narrow" size="18.0" />
                                  </font>
@@ -72,12 +72,16 @@
                         </HBox>
                         <HBox fx:id="HBoxTaskTimer" alignment="CENTER" fillHeight="false" focusTraversable="true" VBox.vgrow="NEVER">
                            <children>
-                              <Label fx:id="LabelHour" alignment="CENTER" contentDisplay="CENTER" text="00" textAlignment="CENTER" textFill="#000000cc">
+                              <Line fx:id="CountdownTimerMinus" endX="10.0" fill="RED" stroke="RED" strokeWidth="5.0">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin></Line>
+                              <Label fx:id="LabelHour" alignment="CENTER" contentDisplay="CENTER" styleClass="CountdownTimer" text="00" textAlignment="CENTER" textFill="#000000cc">
                                  <font>
                                     <Font name="Arial Narrow" size="36.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="LabelSeparatorHM" alignment="CENTER" contentDisplay="CENTER" text=":" textAlignment="CENTER" textFill="#000000cc">
+                              <Label fx:id="LabelSeparatorHM" alignment="CENTER" contentDisplay="CENTER" styleClass="CountdownTimer" text=":" textAlignment="CENTER" textFill="#000000cc">
                                  <font>
                                     <Font name="Arial Narrow" size="36.0" />
                                  </font>
@@ -88,12 +92,12 @@
                                     <Insets />
                                  </opaqueInsets>
                               </Label>
-                              <Label fx:id="LabelMinute" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" text="00" textAlignment="CENTER" textFill="#000000cc">
+                              <Label fx:id="LabelMinute" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" styleClass="CountdownTimer" text="00" textAlignment="CENTER" textFill="#000000cc">
                                  <font>
                                     <Font name="Arial Narrow" size="36.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="LabelSeparatorMS" alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="10.0" text=":" textAlignment="CENTER" textFill="#000000cc">
+                              <Label fx:id="LabelSeparatorMS" alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="10.0" styleClass="CountdownTimer" text=":" textAlignment="CENTER" textFill="#000000cc">
                                  <font>
                                     <Font name="Arial Narrow" size="36.0" />
                                  </font>
@@ -101,7 +105,7 @@
                                     <Insets bottom="5.0" />
                                  </HBox.margin>
                               </Label>
-                              <Label fx:id="LabelSecond" alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="10.0" text="00" textAlignment="CENTER" textFill="#000000cc">
+                              <Label fx:id="LabelSecond" alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="10.0" styleClass="CountdownTimer" text="00" textAlignment="CENTER" textFill="#000000cc">
                                  <font>
                                     <Font name="Arial Narrow" size="36.0" />
                                  </font>
@@ -182,10 +186,5 @@
       </TextArea>
       <MediaView fx:id="MediaViewMotivationVideo" fitHeight="240.0" fitWidth="400.0" onMouseClicked="#PlayPause" onTouchPressed="#PlayPause" StackPane.alignment="CENTER">
       </MediaView>
-      <JFXButton fx:id="ButtonMotivationVideoPlay" onAction="#PlayPause" opacity="0.7" style="-fx-background-radius: 25; -fx-background-color: #ffffff;" text="Play">
-         <padding>
-            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
-         </padding>
-      </JFXButton>
    </children>
 </StackPane>

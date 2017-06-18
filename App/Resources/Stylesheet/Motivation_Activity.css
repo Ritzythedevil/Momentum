@@ -30,3 +30,11 @@
     -fx-background-color: #00b4ff;
     -fx-background-radius: 30;
 }
+
+.CountdownTimer.Positive {
+    -fx-text-fill: #000000;
+}
+
+.CountdownTimer.Negative {
+    -fx-text-fill: #ff0000;
+}
