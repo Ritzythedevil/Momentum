@@ -66,7 +66,6 @@ Libraries/system_tray-3.1.jar = 3be9642d409f9af5a226f1ef910fc158
 Libraries/TrayNotification.jar = 2f974c8891466a0db257bee591928a4d
 Libraries/wagon-provider-api-1.0-beta-6.jar = cc72b5df23a1e39b423b6d30ab7ea5b7
 MotivationalContent/Default/Cover.png = b8e3cd86b0fc100d46c53d8c5d86f3a3
-MotivationalContent/Default/Video.flv = fc2e51ea6a9fe66db5e57c2d0334a4d0
 MotivationalContent/Default/Video.mp4 = a3ac7ddabb263c2d00b73e8177d15c8d
 Resources/Audio/Hello.mp3 = 55b7e8f6b2867871952b5a648dd88007
 Resources/Audio/TimerFinish.mp3 = 47cf8d669ca05ce2a9dbcdd034a0952f

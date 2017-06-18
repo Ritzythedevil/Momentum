@@ -78,7 +78,6 @@ code = Libraries/system_tray-3.1.jar
 code = Libraries/TrayNotification.jar
 code = Libraries/wagon-provider-api-1.0-beta-6.jar
 resource = MotivationalContent/Default/Cover.png
-resource = MotivationalContent/Default/Video.flv
 resource = MotivationalContent/Default/Video.mp4
 resource = Resources/Audio/Hello.mp3
 resource = Resources/Audio/TimerFinish.mp3
