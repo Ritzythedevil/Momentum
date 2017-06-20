@@ -32,6 +32,7 @@ code = Momentum/Utils/DownloadMotivationContent.class
 code = Momentum/Utils/Functions$1.class
 code = Momentum/Utils/Functions$2.class
 code = Momentum/Utils/Functions.class
+code = Momentum/Utils/TimeConversion.class
 code = Libraries/aopalliance-repackaged-2.4.0-b27.jar
 code = Libraries/backport-util-concurrent-3.1.jar
 code = Libraries/classworlds-1.1-alpha-2.jar
