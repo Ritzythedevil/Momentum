@@ -1,0 +1,14 @@
+# The URL from which the client is downloaded
+appbase = https://raw.githubusercontent.com/Ritzythedevil/Momentum/master/App/
+
+# UI Configuration
+ui.name = Momentum
+
+# The main entry point for the application
+class = LaunchMomentum
+
+# Allow App to be run Offline
+allow_offline = true
+
+# Application files
+code = LaunchMomentum.jar
